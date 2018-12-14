@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/side_nav_bar"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20sp"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="15dp"
+            app:cardMaxElevation="0dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="300sp"
+                    android:layout_height="169sp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/episodios"
+                    android:id="@+id/selectepisodioiv"/>
+                <TextView
+                    android:id="@+id/selectserie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Titulo do episodio"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_below="@id/selectepisodioiv"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Episódio 001"
+                    android:fontFamily="sans-serif-condensed"
+                    android:id="@+id/selectepisodio"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:layout_gravity="center"
+            android:text="Assistir episódio"
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/assistirButton"
+            android:background="@android:color/holo_orange_light"
+            android:padding="20sp"/>
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-6303877676651382/4533438357"
+            android:layout_gravity="center">
+        </com.google.android.gms.ads.AdView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Este anúncio ajuda a manter o app gratuito"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"/>
+    </LinearLayout>
+</ScrollView>
